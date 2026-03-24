@@ -527,64 +527,140 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 /* RESPONSIVE */
 @media(max-width:1100px){.sgrid{grid-template-columns:repeat(2,1fr)}.tgrid{grid-template-columns:repeat(2,1fr)}.tps-grid{grid-template-columns:repeat(2,1fr)}.testis{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr;gap:30px}}
 @media(max-width:860px){
+  /* NAV */
   nav{padding:0 16px}
   .nlinks{display:none}
   .nright{display:none}
   .mburg{display:flex}
+
+  /* HERO */
   .hero{grid-template-columns:1fr;padding:80px 16px 52px;gap:36px}
-  .hero h1{font-size:clamp(38px,10vw,56px)}
+  .hero h1{font-size:clamp(34px,9vw,52px)}
   .hdesc{font-size:15px;max-width:100%}
   .hvisual{display:none}
+  .hacts{flex-direction:column;align-items:flex-start;gap:10px}
+  .hacts .btns{display:none}
+  .btnp,.btns{font-size:14px;padding:12px 20px}
+
+  /* STRIP */
   .strip{grid-template-columns:1fr 1fr}
-  .si{padding:16px 18px}
-  .si-n{font-size:22px}
-  .sec{padding:52px 16px}
-  .st{font-size:clamp(26px,7vw,40px)}
+  .si{padding:14px 16px}
+  .si-n{font-size:20px}
+  .si-l{font-size:11px}
+
+  /* SECTIONS */
+  .sec{padding:48px 16px}
+  .st{font-size:clamp(24px,6.5vw,38px)}
+  .sb{font-size:15px}
+
+  /* SERVICE / PORTFOLIO / TEAM / TIPS / TESTI */
   .sgrid{grid-template-columns:1fr}
   .pgrid{grid-template-columns:1fr}
   .prop.lg{grid-row:auto}
-  .about-grid{grid-template-columns:1fr;gap:36px}
+  .about-grid{grid-template-columns:1fr;gap:32px}
   .abadge{position:relative;bottom:auto;right:auto;display:inline-block;margin-top:14px}
   .tgrid{grid-template-columns:1fr}
   .tps-grid{grid-template-columns:1fr}
   .testis{grid-template-columns:1fr}
+
+  /* PROCESS */
   .proc{grid-template-columns:repeat(2,1fr)}
   .proc::before{display:none}
-  .usp-block{grid-template-columns:1fr;padding:28px 18px;gap:28px}
+
+  /* USP */
+  .usp-block{grid-template-columns:1fr;padding:24px 16px;gap:24px}
+
+  /* ── BEWERTUNGSFORMULAR ── */
+  /* Shell */
+  .fshell{border-radius:var(--r2);margin-top:28px}
+
+  /* Step-Bar: nur Punkte + Nummern zeigen, kein Label-Text */
+  .sbar{border-radius:var(--r2) var(--r2) 0 0}
+  .sn{font-size:0;gap:0;padding:12px 2px;flex-direction:column;align-items:center;justify-content:center}
+  .sdot{width:24px;height:24px;font-size:10px;flex-shrink:0}
+
+  /* Form content */
+  .fc{padding:20px 14px 24px}
+  .fct{font-size:17px;margin-bottom:2px}
+  .fcs{font-size:13px;margin-bottom:20px}
+
+  /* Tile grids — inline styles überschreiben */
+  .tiles{grid-template-columns:repeat(2,1fr) !important}
+  .sub-tiles{grid-template-columns:repeat(2,1fr) !important}
+
+  /* Tile sizing */
+  .tile{padding:10px 7px}
+  .tnm{font-size:11px}
+  .tsub{font-size:9px;margin-top:2px}
+
+  /* Checkboxes */
+  .checks{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:5px}
+  .chk{padding:9px 10px}
+  .cl{font-size:12px}
+
+  /* 2/3 col grids */
   .g2,.g3{grid-template-columns:1fr}
   .fg.sp2{grid-column:span 1}
-  .res-mets{grid-template-columns:1fr 1fr}
-  .rm{border-right:none;border-bottom:1.5px solid var(--line)}
-  .scrow{grid-template-columns:120px 1fr 42px}
+
+  /* Slider */
+  .slh{margin-bottom:7px}
+  .slv{font-size:18px}
+  .sll{font-size:10px}
+
+  /* Form footer */
+  .ff{margin-top:24px;padding-top:18px}
+  .btnnext{font-size:13px;padding:11px 20px}
+
+  /* RESULTS — kein horizontaler Überlauf */
+  .ress{overflow-x:hidden;width:100%}
+  .rwrap{overflow-x:hidden;width:100%;box-sizing:border-box}
+  .rhero{padding:24px 16px 32px;overflow-x:hidden}
+  .rhero-inner{grid-template-columns:1fr;gap:16px}
+  .rval{font-size:clamp(36px,10vw,52px)}
+  .rside{text-align:left;margin-top:10px}
+  .rmetabox{display:block;width:100%;box-sizing:border-box}
+  .rmbbar{width:100%}
+  .rv-wrap{overflow:visible}
+  .email-strip{padding:18px 16px;overflow-x:hidden}
+  .email-strip-inner{flex-direction:column;align-items:flex-start;gap:12px;width:100%}
+  .es-row{width:100%;box-sizing:border-box}
+  .es-inp{min-width:0;width:100%;box-sizing:border-box}
+  .res-mets{grid-template-columns:1fr 1fr;overflow-x:hidden}
+  .rm{border-right:none;border-bottom:1.5px solid var(--line);padding:16px}
+  .rmv{font-size:20px}
+  .rblock{padding:20px 16px;overflow-x:hidden}
+  .rbt{font-size:17px}
+  .scrow{grid-template-columns:100px 1fr 38px}
+  .scl{font-size:12px}
   .sctag{display:none}
-  .band{grid-template-columns:28px 1fr auto}
+  .rrank{padding:20px 16px;overflow-x:hidden}
+  .band{grid-template-columns:28px 1fr auto;padding:12px 14px}
   .bpill{display:none}
-  .rhero-inner{grid-template-columns:1fr}
-  .mktg{grid-template-columns:1fr;gap:28px}
-  .conwrap{grid-template-columns:1fr}
-  .conl{border-right:none;border-bottom:1.5px solid var(--line)}
-  .fc{padding:24px 16px}
-  .fshell{border-radius:var(--r2)}
-  .sn{font-size:10px;padding:10px 5px}
-  .sdot{width:17px;height:17px;font-size:9px}
-  .ft{grid-template-columns:1fr}
-  .rcontact-cta-inner{grid-template-columns:1fr}
-  .email-strip-inner{flex-direction:column;align-items:flex-start}
+  .bnm{font-size:13px}
+  .bprice{font-size:13px}
   .accgrid{grid-template-columns:repeat(3,1fr)}
-  .btnp,.btns{font-size:14px;padding:12px 20px}
-  .hacts{flex-direction:column;align-items:flex-start;gap:10px}
-  .hacts .btns{display:none}
-  .conl{padding:40px 16px}
-  .conr{padding:36px 16px}
-  .fct{font-size:18px}
-  .rval{font-size:clamp(40px,12vw,60px)}
-  .rhero{padding:32px 16px 40px}
-  .rblock{padding:24px 16px}
-  .rrank{padding:24px 16px}
-  .rmkt{padding:24px 16px}
-  .rinsight{padding:20px 16px 28px}
-  .rcontact-cta{margin:0 16px 28px}
-  .rcontact-cta-inner{padding:24px 20px}
+  .rmkt{padding:20px 16px;overflow-x:hidden}
+  .mktg{grid-template-columns:1fr;gap:20px}
+  .rinsight{padding:16px 16px 22px;overflow-x:hidden}
+  .insightbox{flex-direction:column;gap:10px}
+  .rcontact-cta{margin:0 0 24px;padding:0 16px;box-sizing:border-box;overflow-x:hidden}
+  .rcontact-cta-inner{grid-template-columns:1fr;padding:20px 16px}
+  .rcct{font-size:16px}
+  .rccb{font-size:13px}
+  .rcc-btns{flex-direction:column;width:100%}
+  .rcc-btn1,.rcc-btn2{width:100%;justify-content:center;white-space:normal;box-sizing:border-box}
+
+  /* PDF-Download Grid — inline style überschreiben */
+  .r-pdf-grid{grid-template-columns:1fr !important;gap:10px !important}
+
+  /* CONTACT */
+  .conwrap{grid-template-columns:1fr}
+  .conl{border-right:none;border-bottom:1.5px solid var(--line);padding:36px 16px}
+  .conr{padding:32px 16px}
+  .cfct{font-size:20px}
+
+  /* FOOTER */
+  .ft{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -1168,7 +1244,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 
     <!-- EMAIL + DOWNLOAD vor Einschätzung -->
     <div class="rblock" style="background:var(--bg2);border-top:1.5px solid var(--line)">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div class="r-pdf-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
         <div style="background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);padding:18px 20px">
           <div style="font-size:12px;font-weight:700;color:var(--ink);margin-bottom:2px;display:flex;align-items:center;gap:6px">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
