@@ -489,9 +489,103 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 .ovcls{background:var(--sage);color:#fff;border:none;border-radius:var(--r);padding:12px 28px;font-family:'Sora',sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background .18s}
 .ovcls:hover{background:var(--sage2)}
 
+/* MOBILE BURGER */
+.mburg{display:none;flex-direction:column;justify-content:center;gap:5.5px;width:40px;height:40px;background:none;border:none;cursor:pointer;padding:9px 8px;border-radius:8px;flex-shrink:0;transition:background .18s}
+.mburg:hover{background:var(--bg2)}
+.mburg span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .28s cubic-bezier(.22,1,.36,1),opacity .2s}
+.mburg.open span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.mburg.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.mburg.open span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* MOBILE MENU */
+.mmenu{position:fixed;inset:0;z-index:200;pointer-events:none}
+.mmenu.open{pointer-events:auto}
+.mmenu-bg{position:absolute;inset:0;background:rgba(15,15,14,.5);opacity:0;transition:opacity .28s;backdrop-filter:blur(4px)}
+.mmenu.open .mmenu-bg{opacity:1}
+.mmenu-panel{position:absolute;top:0;right:0;bottom:0;width:min(300px,82vw);background:var(--bg);transform:translateX(100%);transition:transform .32s cubic-bezier(.22,1,.36,1);display:flex;flex-direction:column;box-shadow:-12px 0 48px rgba(0,0,0,.14)}
+.mmenu.open .mmenu-panel{transform:translateX(0)}
+.mm-head{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid var(--line);height:64px}
+.mm-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
+.mm-mark{width:30px;height:30px;background:var(--sage);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.mm-mark svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:1.8}
+.mm-name{font-size:14px;font-weight:700;color:var(--ink);letter-spacing:-.04em}
+.mm-name em{color:var(--sage);font-style:normal}
+.mm-cls{width:34px;height:34px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .18s}
+.mm-cls:hover{background:var(--line)}
+.mm-cls svg{width:14px;height:14px;stroke:var(--ink);stroke-width:2;fill:none}
+.mm-links{flex:1;padding:16px 12px;display:flex;flex-direction:column;gap:2px;overflow-y:auto}
+.mm-links a{font-size:16px;font-weight:500;color:var(--ink2);text-decoration:none;padding:13px 16px;border-radius:10px;display:flex;align-items:center;gap:10px;transition:all .18s;letter-spacing:-.02em}
+.mm-links a:hover{color:var(--sage);background:var(--sage-lt)}
+.mm-links a svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8;flex-shrink:0;opacity:.5}
+.mm-div{height:1px;background:var(--line);margin:8px 16px}
+.mm-foot{padding:14px 16px 24px;display:flex;flex-direction:column;gap:8px}
+.mm-cta1{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;color:#fff;background:var(--sage);border:none;cursor:pointer;padding:14px;border-radius:10px;font-family:'Sora',sans-serif;transition:background .18s;width:100%}
+.mm-cta1:hover{background:var(--sage2)}
+.mm-cta2{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:500;color:var(--ink);background:none;border:1.5px solid var(--line);cursor:pointer;padding:12px;border-radius:10px;font-family:'Sora',sans-serif;transition:all .18s;width:100%}
+.mm-cta2:hover{border-color:var(--sage);color:var(--sage)}
+
 /* RESPONSIVE */
 @media(max-width:1100px){.sgrid{grid-template-columns:repeat(2,1fr)}.tgrid{grid-template-columns:repeat(2,1fr)}.tps-grid{grid-template-columns:repeat(2,1fr)}.testis{grid-template-columns:repeat(2,1fr)}.ft{grid-template-columns:1fr 1fr;gap:30px}}
-@media(max-width:860px){nav{padding:0 20px}.nlinks{display:none}.hero{grid-template-columns:1fr;padding:90px 20px 60px;gap:40px}.hvisual{display:none}.strip{grid-template-columns:1fr 1fr}.sec{padding:64px 20px}.sgrid{grid-template-columns:1fr}.pgrid{grid-template-columns:1fr}.prop.lg{grid-row:auto}.about-grid{grid-template-columns:1fr;gap:40px}.abadge{position:relative;bottom:auto;right:auto;display:inline-block;margin-top:14px}.tgrid{grid-template-columns:1fr}.tps-grid{grid-template-columns:1fr}.testis{grid-template-columns:1fr}.proc{grid-template-columns:repeat(2,1fr)}.proc::before{display:none}.usp-block{grid-template-columns:1fr;padding:36px 24px;gap:32px}.g2,.g3{grid-template-columns:1fr}.fg.sp2{grid-column:span 1}.res-mets{grid-template-columns:1fr 1fr}.rm{border-right:none;border-bottom:1.5px solid var(--line)}.scrow{grid-template-columns:120px 1fr 42px}.sctag{display:none}.band{grid-template-columns:28px 1fr auto}.bpill{display:none}.rhero-inner{grid-template-columns:1fr}.mktg{grid-template-columns:1fr;gap:28px}.conwrap{grid-template-columns:1fr}.conl{border-right:none;border-bottom:1.5px solid var(--line)}.fc{padding:28px 20px}.sn{font-size:11px;padding:12px 6px}.ft{grid-template-columns:1fr}.rcontact-cta-inner{grid-template-columns:1fr}.email-strip-inner{flex-direction:column;align-items:flex-start}.accgrid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:860px){
+  nav{padding:0 16px}
+  .nlinks{display:none}
+  .nright{display:none}
+  .mburg{display:flex}
+  .hero{grid-template-columns:1fr;padding:80px 16px 52px;gap:36px}
+  .hero h1{font-size:clamp(38px,10vw,56px)}
+  .hdesc{font-size:15px;max-width:100%}
+  .hvisual{display:none}
+  .strip{grid-template-columns:1fr 1fr}
+  .si{padding:16px 18px}
+  .si-n{font-size:22px}
+  .sec{padding:52px 16px}
+  .st{font-size:clamp(26px,7vw,40px)}
+  .sgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .prop.lg{grid-row:auto}
+  .about-grid{grid-template-columns:1fr;gap:36px}
+  .abadge{position:relative;bottom:auto;right:auto;display:inline-block;margin-top:14px}
+  .tgrid{grid-template-columns:1fr}
+  .tps-grid{grid-template-columns:1fr}
+  .testis{grid-template-columns:1fr}
+  .proc{grid-template-columns:repeat(2,1fr)}
+  .proc::before{display:none}
+  .usp-block{grid-template-columns:1fr;padding:28px 18px;gap:28px}
+  .g2,.g3{grid-template-columns:1fr}
+  .fg.sp2{grid-column:span 1}
+  .res-mets{grid-template-columns:1fr 1fr}
+  .rm{border-right:none;border-bottom:1.5px solid var(--line)}
+  .scrow{grid-template-columns:120px 1fr 42px}
+  .sctag{display:none}
+  .band{grid-template-columns:28px 1fr auto}
+  .bpill{display:none}
+  .rhero-inner{grid-template-columns:1fr}
+  .mktg{grid-template-columns:1fr;gap:28px}
+  .conwrap{grid-template-columns:1fr}
+  .conl{border-right:none;border-bottom:1.5px solid var(--line)}
+  .fc{padding:24px 16px}
+  .fshell{border-radius:var(--r2)}
+  .sn{font-size:10px;padding:10px 5px}
+  .sdot{width:17px;height:17px;font-size:9px}
+  .ft{grid-template-columns:1fr}
+  .rcontact-cta-inner{grid-template-columns:1fr}
+  .email-strip-inner{flex-direction:column;align-items:flex-start}
+  .accgrid{grid-template-columns:repeat(3,1fr)}
+  .btnp,.btns{font-size:14px;padding:12px 20px}
+  .hacts{flex-direction:column;align-items:flex-start;gap:10px}
+  .hacts .btns{display:none}
+  .conl{padding:40px 16px}
+  .conr{padding:36px 16px}
+  .fct{font-size:18px}
+  .rval{font-size:clamp(40px,12vw,60px)}
+  .rhero{padding:32px 16px 40px}
+  .rblock{padding:24px 16px}
+  .rrank{padding:24px 16px}
+  .rmkt{padding:24px 16px}
+  .rinsight{padding:20px 16px 28px}
+  .rcontact-cta{margin:0 16px 28px}
+  .rcontact-cta-inner{padding:24px 20px}
+}
 </style>
 </head>
 <body>
@@ -513,7 +607,41 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
     <button class="nghost" onclick="document.getElementById('bewertung').scrollIntoView({behavior:'smooth'})">Immobilie bewerten</button>
     <button class="ncta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Beratung anfragen</button>
   </div>
+  <button class="mburg" id="mburg" aria-label="Menü öffnen" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mmenu">
+  <div class="mmenu-bg" onclick="closeMenu()"></div>
+  <div class="mmenu-panel">
+    <div class="mm-head">
+      <a href="#" class="mm-logo" onclick="closeMenu()">
+        <div class="mm-mark"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <span class="mm-name">Altera <em>Immobilien</em></span>
+      </a>
+      <button class="mm-cls" onclick="closeMenu()" aria-label="Menü schliessen">
+        <svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mm-links">
+      <a href="#leistungen" onclick="closeMenu()"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Leistungen</a>
+      <a href="#portfolio" onclick="closeMenu()"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Portfolio</a>
+      <a href="#ueber-uns" onclick="closeMenu()"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Über uns</a>
+      <a href="#tipps" onclick="closeMenu()"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Ratgeber</a>
+      <a href="#kontakt" onclick="closeMenu()"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .92h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.09a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>Kontakt</a>
+    </div>
+    <div class="mm-div"></div>
+    <div class="mm-foot">
+      <button class="mm-cta1" onclick="closeMenu();document.getElementById('bewertung').scrollIntoView({behavior:'smooth'})">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        Immobilie bewerten
+      </button>
+      <button class="mm-cta2" onclick="closeMenu();document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">Beratung anfragen</button>
+    </div>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -1161,6 +1289,18 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 
 <script>
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>20));
+
+function toggleMenu(){
+  const m=document.getElementById('mmenu'),b=document.getElementById('mburg');
+  const open=m.classList.toggle('open');
+  b.classList.toggle('open',open);
+  document.body.style.overflow=open?'hidden':'';
+}
+function closeMenu(){
+  document.getElementById('mmenu').classList.remove('open');
+  document.getElementById('mburg').classList.remove('open');
+  document.body.style.overflow='';
+}
 
 let cur=1;
 function go(n){
