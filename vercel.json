@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "functions": {
+    "api/submit.js": {
+      "maxDuration": 120,
+      "memory": 512
+    },
+    "api/contact.js": {
+      "maxDuration": 15
+    }
+  }
+}
