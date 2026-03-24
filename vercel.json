@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "outputDirectory": "public",
+  "functions": {
+    "api/submit.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    }
+  }
+}
