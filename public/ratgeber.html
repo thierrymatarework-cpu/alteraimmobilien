@@ -215,8 +215,12 @@ nav.s{box-shadow:0 4px 32px rgba(0,0,0,.05)}
 
 /* TIPS */
 .tps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
-.tip{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);padding:28px;transition:all .28s;cursor:pointer;display:block;text-decoration:none;color:inherit}
-.tip:hover{border-color:var(--sage-mid);box-shadow:0 8px 28px rgba(0,0,0,.06);transform:translateY(-3px)}
+.tip{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);overflow:hidden;transition:all .28s;cursor:pointer;display:block;text-decoration:none;color:inherit}
+.tip:hover{border-color:var(--sage-mid);box-shadow:0 8px 28px rgba(0,0,0,.08);transform:translateY(-3px)}
+.tip-img{height:170px;background:center/cover no-repeat;position:relative}
+.tip-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.3))}
+.tip:hover .tip-img{background-size:105%}
+.tip-body{padding:22px 22px 20px}
 .tip-tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);background:var(--sage-lt);padding:3px 10px;border-radius:20px;margin-bottom:12px}
 .tip-t{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.03em;margin-bottom:8px;line-height:1.3}
 .tip-b{font-size:13px;color:var(--ink3);line-height:1.7}
@@ -703,12 +707,30 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
     <h2 class="st">Wissen, das weiterhilft.</h2>
     <p class="sb">Praktische Tipps rund um Kauf, Verkauf und Bewertung in der Schweiz.</p>
     <div class="tps-grid">
-      <a class="tip" href="blog-verkauf-zeitpunkt.html"><div class="tip-tg">Verkauf</div><div class="tip-t">Der richtige Zeitpunkt für den Verkauf</div><div class="tip-b">Welche Marktfaktoren entscheidend sind und worauf Sie achten sollten, damit Sie zum optimalen Moment verkaufen.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
-      <a class="tip" href="blog-hedonische-methode.html"><div class="tip-tg">Bewertung</div><div class="tip-t">Hedonische Methode einfach erklärt</div><div class="tip-b">Wie die Methodik der Schweizer Kantonalbanken und Versicherungen funktioniert und warum sie so präzise ist.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
-      <a class="tip" href="blog-5-massnahmen.html"><div class="tip-tg">Wertsteigerung</div><div class="tip-t">5 Massnahmen vor dem Verkauf</div><div class="tip-b">Kleine Investitionen mit grosser Wirkung. Was sich wirklich lohnt und was nicht.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
-      <a class="tip" href="blog-grundstueckgewinnsteuer.html"><div class="tip-tg">Steuern</div><div class="tip-t">Grundstückgewinnsteuer verstehen</div><div class="tip-b">Ein oft unterschätzter Kostenfaktor. Wie sie berechnet wird und wie Sie sie legal optimieren können.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
-      <a class="tip" href="blog-besichtigung.html"><div class="tip-tg">Kauf</div><div class="tip-t">Besichtigung und Due Diligence</div><div class="tip-b">Was Sie bei einer Besichtigung unbedingt prüfen sollten. Unsere Checkliste für Käufer.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
-      <a class="tip" href="blog-immobilienmarkt-2025.html"><div class="tip-tg">Markt</div><div class="tip-t">Schweizer Immobilienmarkt 2025</div><div class="tip-b">Preisentwicklung, Zinsumfeld, regionale Unterschiede. Was Sie jetzt wissen sollten.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-verkauf-zeitpunkt.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Verkauf</div><div class="tip-t">Der richtige Zeitpunkt für den Verkauf</div><div class="tip-b">Welche Marktfaktoren entscheidend sind und worauf Sie achten sollten, damit Sie zum optimalen Moment verkaufen.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
+      <a class="tip" href="blog-hedonische-methode.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Bewertung</div><div class="tip-t">Hedonische Methode einfach erklärt</div><div class="tip-b">Wie die Methodik der Schweizer Kantonalbanken und Versicherungen funktioniert und warum sie so präzise ist.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
+      <a class="tip" href="blog-5-massnahmen.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Wertsteigerung</div><div class="tip-t">5 Massnahmen vor dem Verkauf</div><div class="tip-b">Kleine Investitionen mit grosser Wirkung. Was sich wirklich lohnt und was nicht.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
+      <a class="tip" href="blog-grundstueckgewinnsteuer.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Steuern</div><div class="tip-t">Grundstückgewinnsteuer verstehen</div><div class="tip-b">Ein oft unterschätzter Kostenfaktor. Wie sie berechnet wird und wie Sie sie legal optimieren können.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
+      <a class="tip" href="blog-besichtigung.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Kauf</div><div class="tip-t">Besichtigung und Due Diligence</div><div class="tip-b">Was Sie bei einer Besichtigung unbedingt prüfen sollten. Unsere Checkliste für Käufer.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
+      <a class="tip" href="blog-immobilienmarkt-2025.html">
+        <div class="tip-img" style="background-image:url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80')"></div>
+        <div class="tip-body"><div class="tip-tg">Markt</div><div class="tip-t">Schweizer Immobilienmarkt 2025</div><div class="tip-b">Preisentwicklung, Zinsumfeld, regionale Unterschiede. Was Sie jetzt wissen sollten.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      </a>
     </div>
   </div>
 </section>
@@ -732,7 +754,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
   </div>
   <div class="fbot">
     <div class="fbcopy">© 2025 Altera Immobilien GmbH · Küsnacht am Zürichsee</div>
-    <div class="fblnks"><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">AGB</a></div>
+    <div class="fblnks"><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a></div>
   </div>
 </footer>
 

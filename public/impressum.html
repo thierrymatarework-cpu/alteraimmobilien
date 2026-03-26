@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum — Altera Immobilien</title>
+<meta name="description" content="Impressum der Altera Immobilien GmbH, Küsnacht am Zürichsee.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#344E41;--sage2:#3A5A4A;--sage3:#52796F;--sage-lt:#EDF1EE;--sage-mid:#D0DDD4;
+  --sand:#B5905A;--sand2:#C9A874;--sand-lt:#FBF6EE;--sand-mid:#EFE0C4;
+  --ink:#0F0F0E;--ink2:#2E2E2C;--ink3:#6B6B66;--ink4:#B2B2AC;
+  --line:#EAEAE4;--line2:#F4F4EE;
+  --bg:#FFFFFF;--bg2:#F9F8F4;--bg3:#F3F1EB;
+  --r:8px;--r2:14px;--r3:20px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--sage-lt);color:var(--sage)}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.nlogo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nmark{width:34px;height:34px;background:var(--sage);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nmark svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:1.8}
+.nname{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.04em}
+.nname em{color:var(--sage);font-style:normal}
+.nlinks{display:flex;gap:2px}
+.nlinks a{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;padding:7px 13px;border-radius:7px;transition:all .18s}
+.nlinks a:hover{color:var(--ink);background:var(--bg2)}
+.nright{display:flex;gap:8px}
+.ncta{font-size:13px;font-weight:600;color:#fff;background:var(--sage);border:none;cursor:pointer;padding:9px 20px;border-radius:8px;transition:all .18s;font-family:'Sora',sans-serif;text-decoration:none;display:inline-block}
+.ncta:hover{background:var(--sage2)}
+
+/* MOBILE NAV */
+.nav-burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;border-radius:7px;background:none;border:none}
+.nav-burger span{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+.nav-burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0}
+.nav-burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;bottom:0;background:#fff;z-index:99;flex-direction:column;padding:24px 5%;gap:4px;overflow-y:auto;transform:translateX(100%);transition:transform .3s cubic-bezier(.4,0,.2,1)}
+.mobile-menu.open{transform:translateX(0)}
+.mobile-menu a{font-size:17px;font-weight:500;color:var(--ink);text-decoration:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.mobile-menu a:last-child{border-bottom:none}
+.mobile-menu .mm-cta{margin-top:16px;background:var(--sage);color:#fff;text-align:center;padding:16px;border-radius:12px;font-weight:700;border:none}
+
+/* PAGE CONTENT */
+.legal-wrap{max-width:760px;margin:0 auto;padding:110px 5% 80px}
+.legal-wrap h1{font-family:'DM Serif Display',serif;font-size:clamp(36px,5vw,52px);font-weight:400;letter-spacing:-.03em;color:var(--ink);margin-bottom:8px;line-height:1.1}
+.legal-wrap .legal-sub{font-size:15px;color:var(--ink3);margin-bottom:48px}
+.legal-wrap h2{font-size:18px;font-weight:700;color:var(--ink);letter-spacing:-.02em;margin:36px 0 12px}
+.legal-wrap h3{font-size:15px;font-weight:600;color:var(--ink2);margin:20px 0 8px}
+.legal-wrap p{font-size:15px;color:var(--ink2);margin-bottom:14px;line-height:1.72}
+.legal-wrap a{color:var(--sage);text-decoration:none}
+.legal-wrap a:hover{text-decoration:underline}
+.legal-wrap ul{margin:10px 0 18px 20px}
+.legal-wrap ul li{font-size:15px;color:var(--ink2);margin-bottom:6px;line-height:1.65}
+.legal-box{background:var(--bg2);border:1.5px solid var(--line);border-radius:var(--r2);padding:24px 28px;margin-bottom:28px}
+.legal-box p{margin-bottom:6px}
+.legal-box p:last-child{margin-bottom:0}
+.legal-divider{height:1px;background:var(--line);margin:40px 0}
+
+/* FOOTER */
+.footer{background:var(--ink);color:rgba(255,255,255,.55);padding:56px 5% 32px}
+.ft{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.fbn{font-size:18px;font-weight:800;color:#fff;letter-spacing:-.04em;margin-bottom:10px}
+.fbn em{color:var(--sand2);font-style:normal}
+.fbt{font-size:13px;line-height:1.7;max-width:220px}
+.fc4 h4{font-size:12px;font-weight:700;color:#fff;letter-spacing:.06em;text-transform:uppercase;margin-bottom:16px}
+.fc4 a{display:block;font-size:13px;color:rgba(255,255,255,.5);text-decoration:none;margin-bottom:9px;transition:color .18s}
+.fc4 a:hover{color:#fff}
+.fbot{display:flex;justify-content:space-between;align-items:center;padding-top:24px;border-top:1px solid rgba(255,255,255,.07)}
+.fbcopy{font-size:12px;color:rgba(255,255,255,.3)}
+.fblnks{display:flex;gap:20px}
+.fblnks a{font-size:12px;color:rgba(255,255,255,.35);text-decoration:none;transition:color .18s}
+.fblnks a:hover{color:#fff}
+
+@media(max-width:860px){
+  .nlinks,.nright{display:none}
+  .nav-burger{display:flex}
+  .mobile-menu{display:flex}
+  .ft{grid-template-columns:1fr 1fr;gap:32px}
+  .fbot{flex-direction:column;gap:12px;text-align:center}
+  .fblnks{flex-wrap:wrap;justify-content:center}
+}
+@media(max-width:480px){
+  .ft{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav id="mainNav">
+  <a href="index.html" class="nlogo">
+    <div class="nmark"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <div class="nname">Altera <em>Immobilien</em></div>
+  </a>
+  <div class="nlinks">
+    <a href="leistungen.html">Leistungen</a>
+    <a href="bewertung.html">Bewertung</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="ratgeber.html">Ratgeber</a>
+    <a href="ueber-uns.html">Über uns</a>
+  </div>
+  <div class="nright">
+    <a href="kontakt.html" class="ncta">Kontakt</a>
+  </div>
+  <button class="nav-burger" id="navBurger" onclick="toggleMobileMenu()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="leistungen.html" onclick="closeMobileMenu()">Leistungen</a>
+  <a href="bewertung.html" onclick="closeMobileMenu()">Bewertung</a>
+  <a href="portfolio.html" onclick="closeMobileMenu()">Portfolio</a>
+  <a href="ratgeber.html" onclick="closeMobileMenu()">Ratgeber</a>
+  <a href="ueber-uns.html" onclick="closeMobileMenu()">Über uns</a>
+  <a href="kontakt.html" class="mm-cta" onclick="closeMobileMenu()">Kontakt aufnehmen</a>
+</div>
+
+<div class="legal-wrap">
+  <h1>Impressum</h1>
+  <p class="legal-sub">Angaben gemäss Art. 13 DSG und den Anforderungen des schweizerischen Rechts.</p>
+
+  <div class="legal-box">
+    <p><strong>Altera Immobilien GmbH</strong></p>
+    <p>Seestrasse 88<br>8700 Küsnacht am Zürichsee<br>Schweiz</p>
+  </div>
+
+  <h2>Kontakt</h2>
+  <p>Telefon: <a href="tel:+41440000000">+41 44 000 00 00</a><br>
+  E-Mail: <a href="mailto:info@altera-immobilien.ch">info@altera-immobilien.ch</a></p>
+
+  <h2>Handelsregistereintrag</h2>
+  <p>Eingetragen im Handelsregister des Kantons Zürich.<br>
+  Firmenname: Altera Immobilien GmbH<br>
+  UID: CHE-XXX.XXX.XXX</p>
+
+  <div class="legal-divider"></div>
+
+  <h2>Verantwortliche Personen</h2>
+  <p>Thierry Matare und Janis Matare, Geschäftsführer</p>
+
+  <h2>Haftungsausschluss</h2>
+  <p>Die Inhalte dieser Website wurden mit grösster Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten nach allgemeinen Gesetzen verantwortlich.</p>
+  <p>Unsere Website enthält Links zu externen Websites Dritter. Auf deren Inhalte haben wir keinen Einfluss. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+
+  <h2>Urheberrecht</h2>
+  <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem schweizerischen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung ausserhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+
+  <h2>Bildnachweise</h2>
+  <p>Bilder auf dieser Website stammen teilweise von <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>. Die jeweiligen Fotografen sind bei Unsplash aufgeführt.</p>
+
+  <div class="legal-divider"></div>
+
+  <p style="font-size:13px;color:var(--ink4)">Stand: März 2025</p>
+</div>
+
+<footer class="footer">
+  <div class="ft">
+    <div>
+      <div class="fbn">Altera <em>Immobilien</em></div>
+      <div class="fbt">Ein familiäres Unternehmen aus Küsnacht am Zürichsee — mit Leidenschaft für Immobilien und Menschen.</div>
+    </div>
+    <div class="fc4"><h4>Leistungen</h4><a href="leistungen.html">Immobilienvermittlung</a><a href="bewertung.html">Immobilie bewerten</a><a href="leistungen.html">Vermarktung</a><a href="leistungen.html">Rundum-Betreuung</a></div>
+    <div class="fc4"><h4>Unternehmen</h4><a href="ueber-uns.html">Über uns</a><a href="portfolio.html">Portfolio</a><a href="ratgeber.html">Ratgeber</a><a href="kontakt.html">Kontakt</a></div>
+    <div class="fc4"><h4>Kontakt</h4><a href="tel:+41440000000">+41 44 000 00 00</a><a href="mailto:info@altera-immobilien.ch">info@altera-immobilien.ch</a><a href="#">Seestrasse 88, 8700 Küsnacht</a></div>
+  </div>
+  <div class="fbot">
+    <div class="fbcopy">© 2025 Altera Immobilien GmbH · Küsnacht am Zürichsee</div>
+    <div class="fblnks"><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a></div>
+  </div>
+</footer>
+
+<script>
+function toggleMobileMenu(){
+  const menu=document.getElementById('mobileMenu');
+  const burger=document.getElementById('navBurger');
+  const isOpen=menu.classList.contains('open');
+  menu.classList.toggle('open',!isOpen);
+  burger.classList.toggle('open',!isOpen);
+  document.body.style.overflow=isOpen?'':'hidden';
+}
+function closeMobileMenu(){
+  document.getElementById('mobileMenu').classList.remove('open');
+  document.getElementById('navBurger').classList.remove('open');
+  document.body.style.overflow='';
+}
+</script>
+</body>
+</html>

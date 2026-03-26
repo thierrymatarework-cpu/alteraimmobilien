@@ -464,14 +464,29 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 .cfbtn:hover{background:var(--sage2)}
 .cfnote{font-size:11px;color:var(--ink4);text-align:center;margin-top:8px}
 
-/* KARTE */
+/* KARTE + INFO */
 .map-sec{padding:72px 5%;background:var(--bg2);border-top:1.5px solid var(--line)}
-.map-sec-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1.5fr;gap:52px;align-items:stretch}
-.map-embed-wrap{height:420px;border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--line);box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.map-sec-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr;gap:52px;align-items:stretch}
+.map-embed-wrap{height:460px;border-radius:var(--r2);overflow:hidden;border:1.5px solid var(--line);box-shadow:0 8px 32px rgba(0,0,0,.08)}
+.con-detail-list{display:flex;flex-direction:column;gap:14px}
+.con-detail{display:flex;align-items:flex-start;gap:14px;text-decoration:none;color:inherit;padding:14px 16px;border:1.5px solid var(--line);border-radius:var(--r2);background:var(--bg);transition:border-color .18s}
+.con-detail:hover{border-color:var(--sage-mid)}
+.con-detail-ico{width:36px;height:36px;border-radius:9px;background:var(--sage-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.con-detail-v{font-size:13px;font-weight:600;color:var(--ink)}
+.con-detail-s{font-size:12px;color:var(--ink3);margin-top:2px}
+
+/* KONTAKTFORMULAR */
+.con-form-sec{padding:80px 5%;border-top:1.5px solid var(--line)}
+.con-form-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.con-team-preview{display:flex;align-items:center;gap:12px;margin-top:28px;padding:16px 20px;background:var(--sage-lt);border-radius:var(--r2)}
+.con-team-av{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;border:2px solid #fff;flex-shrink:0}
+
 @media(max-width:860px){
   .map-sec{padding:52px 20px}
   .map-sec-inner{grid-template-columns:1fr}
   .map-embed-wrap{height:280px}
+  .con-form-sec{padding:52px 20px}
+  .con-form-inner{grid-template-columns:1fr;gap:32px}
 }
 
 /* FOOTER */
@@ -706,28 +721,58 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
     <p class="page-sub">Ob Verkauf, Bewertung oder erste Orientierung — wir nehmen uns Zeit für Sie.</p>
   </div>
 </div>
-<!-- KONTAKT -->
-<section id="kontakt">
-  <div class="conwrap">
-    <div class="conl">
-      <div class="ey">Kontakt</div>
-      <h2 class="st">Sprechen wir.</h2>
-      <p class="conbody">Ob Immobilienverkauf, Bewertung oder erste Orientierung — wir nehmen uns Zeit für Sie. Persönlich, ehrlich, ohne Druck.</p>
-      <div class="conlist">
-        <div class="ci"><div class="cil">Telefon</div><div class="civ">+41 44 000 00 00</div><div class="cis">Mo–Fr, 08:00–18:00 Uhr</div></div>
-        <div class="ci"><div class="cil">E-Mail</div><div class="civ"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="147c7578787b54757860716675397d79797b767d787d717a3a777c">[email&#160;protected]</a></div><div class="cis">Antwort innert 24 Stunden</div></div>
-        <div class="ci"><div class="cil">Adresse</div><div class="civ">Seestrasse 88, 8700 Küsnacht</div><div class="cis">Nach Vereinbarung</div></div>
+<!-- KARTE + KONTAKTINFOS -->
+<section class="map-sec" id="kontakt">
+  <div class="map-sec-inner">
+    <div class="map-embed-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.5!2d8.5836!3d47.3182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa6d2c4a7a0a5%3A0x1!2sSeestrasse+88%2C+8700+K%C3%BCsnacht!5e0!3m2!1sde!2sch!4v1"
+        width="100%" height="100%" style="border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="Altera Immobilien Küsnacht Standort">
+      </iframe>
+    </div>
+    <div class="map-info">
+      <div class="ey">Standort</div>
+      <h2 class="st" style="font-size:clamp(26px,3vw,38px)">Sie finden uns in Küsnacht.</h2>
+      <p style="font-size:15px;color:var(--ink3);line-height:1.78;font-weight:300;margin-top:10px;margin-bottom:28px">Direkt am Zürichsee, im Herzen der Goldküste. Termine gerne nach Vereinbarung.</p>
+      <div class="con-detail-list">
+        <a href="tel:+41440000000" class="con-detail">
+          <div class="con-detail-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="con-detail-v">+41 44 000 00 00</div><div class="con-detail-s">Mo – Fr, 08:00 – 18:00 Uhr</div></div>
+        </a>
+        <a href="mailto:hallo@altera-immobilien.ch" class="con-detail">
+          <div class="con-detail-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="con-detail-v">hallo@altera-immobilien.ch</div><div class="con-detail-s">Antwort innert 24 Stunden</div></div>
+        </a>
+        <div class="con-detail">
+          <div class="con-detail-ico"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="con-detail-v">Seestrasse 88, 8700 Küsnacht</div><div class="con-detail-s">S6 Haltestelle Küsnacht, 5 Min. zu Fuss</div></div>
+        </div>
       </div>
-      <div class="contags">
+      <div class="contags" style="margin-top:24px">
         <div class="ctag">Unverbindlich</div>
         <div class="ctag">Kein Verkaufsdruck</div>
-        <div class="ctag">Familiäres Unternehmen</div>
+        <div class="ctag">Familienbetrieb</div>
         <div class="ctag">Termin innert 48h</div>
       </div>
     </div>
-    <div class="conr">
-      <div class="cfct">Termin anfragen</div>
-      <div class="cfcs">Wir melden uns innert 24 Stunden.</div>
+  </div>
+</section>
+
+<!-- KONTAKTFORMULAR -->
+<section class="con-form-sec">
+  <div class="con-form-inner">
+    <div class="con-form-left">
+      <div class="ey">Termin anfragen</div>
+      <h2 class="st" style="font-size:clamp(26px,3vw,38px)">Schreiben Sie uns.</h2>
+      <p style="font-size:15px;color:var(--ink3);line-height:1.78;font-weight:300;margin-top:10px">Wir melden uns innert 24 Stunden persönlich bei Ihnen. Kein Callcenter, kein Formularautomatismus, sondern Thierry oder Janis direkt.</p>
+      <div class="con-team-preview">
+        <div class="con-team-av" style="background:var(--sage)">TM</div>
+        <div class="con-team-av" style="background:var(--sage3);margin-left:-10px">JB</div>
+        <div style="font-size:13px;color:var(--ink3);margin-left:6px">Thierry oder Janis<br><span style="color:var(--sage);font-weight:600">antwortet persönlich</span></div>
+      </div>
+    </div>
+    <div class="con-form-right">
       <div class="cff">
         <input class="cfi" type="text" placeholder="Vor- und Nachname *">
         <input class="cfi" type="email" placeholder="E-Mail-Adresse *">
@@ -735,7 +780,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
         <select class="cfsel">
           <option value="">Was beschäftigt Sie?</option>
           <option>Immobilie verkaufen</option>
-          <option>Vor-Ort-Bewertung</option>
+          <option>Vor-Ort-Bewertung anfragen</option>
           <option>Immobilie kaufen</option>
           <option>Erbschaft / Erbteilung</option>
           <option>Scheidung / Gütertrennung</option>
@@ -744,56 +789,9 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
         </select>
         <input class="cfi" type="text" placeholder="Adresse der Immobilie (optional)">
         <textarea class="cfta" placeholder="Ihre Nachricht (optional)…"></textarea>
-        <button class="cfbtn" onclick="submitContact(this.closest('.cff') || this.closest('div'))" >Nachricht senden →</button>
-        <div class="cfnote">Unverbindlich · diskret · persönlich</div>
+        <button class="cfbtn" onclick="submitContact(this.closest('.cff'))">Nachricht senden →</button>
+        <div class="cfnote">Unverbindlich · diskret · persönlich · <a href="datenschutz.html" style="color:var(--sage);text-decoration:none">Datenschutz</a></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- KARTE -->
-<section class="map-sec">
-  <div class="map-sec-inner">
-    <div class="map-info">
-      <div class="ey">Standort</div>
-      <h2 class="st" style="font-size:clamp(24px,3vw,36px)">Sie finden uns in Küsnacht.</h2>
-      <p style="font-size:15px;color:var(--ink3);line-height:1.78;font-weight:300;margin-top:12px;max-width:380px">Direkt am Zürichsee, im Herzen der Goldküste. Unser Büro befindet sich an der Seestrasse 88 in Küsnacht. Termine gerne nach Vereinbarung.</p>
-      <div style="margin-top:28px;display:flex;flex-direction:column;gap:12px">
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:36px;height:36px;border-radius:9px;background:var(--sage-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink)">Seestrasse 88</div>
-            <div style="font-size:12px;color:var(--ink3)">8700 Küsnacht am Zürichsee</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:36px;height:36px;border-radius:9px;background:var(--sage-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><polyline points="23 7 13 17 8 12 1 18"/><polyline points="17 7 23 7 23 13"/></svg>
-          </div>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink)">S-Bahn Küsnacht</div>
-            <div style="font-size:12px;color:var(--ink3)">S6 · 5 Minuten zu Fuss</div>
-          </div>
-        </div>
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:36px;height:36px;border-radius:9px;background:var(--sage-lt);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <div style="font-size:13px;font-weight:600;color:var(--ink)">Mo – Fr, 08:00 – 18:00 Uhr</div>
-            <div style="font-size:12px;color:var(--ink3)">Termine auch ausserhalb Bürozeiten möglich</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="map-embed-wrap">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.!2d8.5836!3d47.3182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa6d2c4a7a0a5%3A0x1!2sSeestrasse+88%2C+8700+K%C3%BCsnacht!5e0!3m2!1sde!2sch!4v1"
-        width="100%" height="100%" style="border:0;border-radius:var(--r2);display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-        title="Altera Immobilien Küsnacht Standort">
-      </iframe>
     </div>
   </div>
 </section>
@@ -811,7 +809,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
   </div>
   <div class="fbot">
     <div class="fbcopy">© 2025 Altera Immobilien GmbH · Küsnacht am Zürichsee</div>
-    <div class="fblnks"><a href="#">Datenschutz</a><a href="#">Impressum</a><a href="#">AGB</a></div>
+    <div class="fblnks"><a href="datenschutz.html">Datenschutz</a><a href="impressum.html">Impressum</a><a href="agb.html">AGB</a></div>
   </div>
 </footer>
 
