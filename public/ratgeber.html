@@ -215,7 +215,7 @@ nav.s{box-shadow:0 4px 32px rgba(0,0,0,.05)}
 
 /* TIPS */
 .tps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}
-.tip{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);padding:28px;transition:all .28s;cursor:pointer}
+.tip{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);padding:28px;transition:all .28s;cursor:pointer;display:block;text-decoration:none;color:inherit}
 .tip:hover{border-color:var(--sage-mid);box-shadow:0 8px 28px rgba(0,0,0,.06);transform:translateY(-3px)}
 .tip-tg{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);background:var(--sage-lt);padding:3px 10px;border-radius:20px;margin-bottom:12px}
 .tip-t{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.03em;margin-bottom:8px;line-height:1.3}
@@ -641,7 +641,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 </head>
 <body>
 <nav id="nav">
-  <a href="#" class="nlogo">
+  <a href="index.html" class="nlogo">
     <div class="nmark"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
     <span class="nname">Altera <em>Immobilien</em></span>
   </a>
@@ -703,12 +703,12 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
     <h2 class="st">Wissen, das weiterhilft.</h2>
     <p class="sb">Praktische Tipps rund um Kauf, Verkauf und Bewertung in der Schweiz.</p>
     <div class="tps-grid">
-      <div class="tip"><div class="tip-tg">Verkauf</div><div class="tip-t">Der richtige Zeitpunkt für den Verkauf</div><div class="tip-b">Welche Marktfaktoren entscheidend sind und worauf Sie achten sollten — damit Sie zum optimalen Moment verkaufen.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
-      <div class="tip"><div class="tip-tg">Bewertung</div><div class="tip-t">Hedonische Methode einfach erklärt</div><div class="tip-b">Wie die Methodik der Schweizer Kantonalbanken und Versicherungen funktioniert — und warum sie so präzise ist.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
-      <div class="tip"><div class="tip-tg">Wertsteigerung</div><div class="tip-t">5 Massnahmen vor dem Verkauf</div><div class="tip-b">Kleine Investitionen mit grosser Wirkung: Was sich wirklich lohnt — und was nicht.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
-      <div class="tip"><div class="tip-tg">Steuern</div><div class="tip-t">Grundstückgewinnsteuer verstehen</div><div class="tip-b">Ein oft unterschätzter Kostenfaktor. Wie sie berechnet wird und wie Sie sie legal optimieren können.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
-      <div class="tip"><div class="tip-tg">Kauf</div><div class="tip-t">Besichtigung & Due Diligence</div><div class="tip-b">Was Sie bei einer Besichtigung unbedingt prüfen sollten — unsere Checkliste für Käufer.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
-      <div class="tip"><div class="tip-tg">Markt</div><div class="tip-t">Schweizer Immobilienmarkt 2025</div><div class="tip-b">Preisentwicklung, Zinsumfeld, regionale Unterschiede — was Sie jetzt wissen sollten.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></div>
+      <a class="tip" href="blog-verkauf-zeitpunkt.html"><div class="tip-tg">Verkauf</div><div class="tip-t">Der richtige Zeitpunkt für den Verkauf</div><div class="tip-b">Welche Marktfaktoren entscheidend sind und worauf Sie achten sollten, damit Sie zum optimalen Moment verkaufen.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-hedonische-methode.html"><div class="tip-tg">Bewertung</div><div class="tip-t">Hedonische Methode einfach erklärt</div><div class="tip-b">Wie die Methodik der Schweizer Kantonalbanken und Versicherungen funktioniert und warum sie so präzise ist.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-5-massnahmen.html"><div class="tip-tg">Wertsteigerung</div><div class="tip-t">5 Massnahmen vor dem Verkauf</div><div class="tip-b">Kleine Investitionen mit grosser Wirkung. Was sich wirklich lohnt und was nicht.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-grundstueckgewinnsteuer.html"><div class="tip-tg">Steuern</div><div class="tip-t">Grundstückgewinnsteuer verstehen</div><div class="tip-b">Ein oft unterschätzter Kostenfaktor. Wie sie berechnet wird und wie Sie sie legal optimieren können.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-besichtigung.html"><div class="tip-tg">Kauf</div><div class="tip-t">Besichtigung und Due Diligence</div><div class="tip-b">Was Sie bei einer Besichtigung unbedingt prüfen sollten. Unsere Checkliste für Käufer.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
+      <a class="tip" href="blog-immobilienmarkt-2025.html"><div class="tip-tg">Markt</div><div class="tip-t">Schweizer Immobilienmarkt 2025</div><div class="tip-b">Preisentwicklung, Zinsumfeld, regionale Unterschiede. Was Sie jetzt wissen sollten.</div><div class="tip-more">Weiterlesen <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div></a>
     </div>
   </div>
 </section>

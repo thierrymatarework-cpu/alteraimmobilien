@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Der richtige Zeitpunkt für den Verkauf — Altera Immobilien Ratgeber</title>
+<meta name="description" content="Wann ist der beste Zeitpunkt, eine Immobilie zu verkaufen? Marktfaktoren, Saisonalität und Strategie erklärt von Altera Immobilien Küsnacht.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sage:#344E41;--sage2:#3A5A4A;--sage3:#52796F;--sage-lt:#EDF1EE;--sage-mid:#D0DDD4;
+  --sand:#B5905A;--sand2:#C9A874;--sand-lt:#FBF6EE;--sand-mid:#EFE0C4;
+  --ink:#0F0F0E;--ink2:#2E2E2C;--ink3:#6B6B66;--ink4:#B2B2AC;
+  --line:#EAEAE4;--bg:#FFFFFF;--bg2:#F9F8F4;
+  --r:8px;--r2:14px;--r3:20px;
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Sora',sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:var(--sage-lt);color:var(--sage)}
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-thumb{background:var(--sand-mid);border-radius:2px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 5%;background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);transition:box-shadow .3s}
+nav.s{box-shadow:0 4px 32px rgba(0,0,0,.05)}
+.nlogo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.nmark{width:34px;height:34px;background:var(--sage);border-radius:9px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.nmark svg{width:17px;height:17px;stroke:#fff;fill:none;stroke-width:1.8}
+.nname{font-size:16px;font-weight:700;color:var(--ink);letter-spacing:-.04em}
+.nname em{color:var(--sage);font-style:normal}
+.nlinks{display:flex;gap:2px}
+.nlinks a{font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;padding:7px 13px;border-radius:7px;transition:all .18s}
+.nlinks a:hover{color:var(--ink);background:var(--bg2)}
+.nright{display:flex;gap:8px}
+.nghost{font-size:13px;font-weight:500;color:var(--ink);border:1.5px solid var(--line);background:none;cursor:pointer;padding:8px 18px;border-radius:8px;transition:all .18s;font-family:'Sora',sans-serif}
+.nghost:hover{border-color:var(--sage);color:var(--sage)}
+.ncta{font-size:13px;font-weight:600;color:#fff;background:var(--sage);border:none;cursor:pointer;padding:9px 20px;border-radius:8px;transition:all .18s;font-family:'Sora',sans-serif}
+.ncta:hover{background:var(--sage2)}
+
+/* HAMBURGER */
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:4.5px;width:38px;height:38px;background:none;border:none;cursor:pointer;padding:5px;border-radius:8px}
+.nav-burger span{display:block;height:1.5px;background:var(--ink);border-radius:1px;transition:all .25s;transform-origin:center}
+.nav-burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-burger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-burger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:60px;left:0;right:0;bottom:0;background:var(--bg);z-index:998;padding:20px 24px 48px;overflow-y:auto;transform:translateY(-6px);opacity:0;visibility:hidden;transition:opacity .18s,transform .18s,visibility .18s;pointer-events:none}
+.mobile-menu.open{transform:translateY(0);opacity:1;visibility:visible;pointer-events:all}
+.mobile-menu a{display:block;font-size:18px;font-weight:500;color:var(--ink);text-decoration:none;padding:16px 0;border-bottom:1px solid var(--line)}
+.mobile-menu .mm-btns{margin-top:24px;display:flex;flex-direction:column;gap:10px}
+.mobile-menu .mm-btns button{width:100%;padding:14px;font-size:15px;font-weight:600;border-radius:10px;cursor:pointer;font-family:'Sora',sans-serif;border:none}
+.mobile-menu .mm-ghost{background:var(--bg2);color:var(--ink);border:1.5px solid var(--line)!important}
+.mobile-menu .mm-cta{background:var(--sage);color:#fff}
+
+/* ARTIKEL HERO */
+.art-hero{padding:110px 5% 60px;background:var(--bg2);border-bottom:1.5px solid var(--line)}
+.art-hero-inner{max-width:760px;margin:0 auto}
+.art-back{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--ink3);text-decoration:none;margin-bottom:28px;transition:color .18s}
+.art-back:hover{color:var(--sage)}
+.art-back svg{stroke:currentColor;fill:none;stroke-width:2}
+.art-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);background:var(--sage-lt);padding:4px 12px;border-radius:20px;margin-bottom:16px}
+.art-h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,4.5vw,52px);font-weight:400;color:var(--ink);line-height:1.08;letter-spacing:-.03em;margin-bottom:18px}
+.art-meta{display:flex;align-items:center;gap:16px;font-size:12px;color:var(--ink4)}
+.art-meta span{display:flex;align-items:center;gap:5px}
+.art-meta svg{stroke:var(--ink4);fill:none;stroke-width:2}
+
+/* ARTIKEL BODY */
+.art-body{padding:64px 5%;max-width:760px;margin:0 auto}
+.art-lead{font-size:18px;color:var(--ink2);line-height:1.78;font-weight:400;margin-bottom:40px;border-left:3px solid var(--sage);padding-left:20px}
+.art-body h2{font-family:'DM Serif Display',serif;font-size:clamp(22px,2.5vw,30px);font-weight:400;color:var(--ink);letter-spacing:-.02em;margin:44px 0 16px}
+.art-body h3{font-size:17px;font-weight:700;color:var(--ink);margin:28px 0 10px;letter-spacing:-.02em}
+.art-body p{font-size:15px;color:var(--ink2);line-height:1.88;font-weight:300;margin-bottom:18px}
+.art-body p strong{color:var(--ink);font-weight:600}
+.art-body ul,.art-body ol{margin:0 0 20px 22px}
+.art-body li{font-size:15px;color:var(--ink2);line-height:1.8;font-weight:300;margin-bottom:6px;padding-left:6px}
+.art-body li strong{color:var(--ink);font-weight:600}
+
+.art-infobox{background:var(--sage-lt);border:1.5px solid var(--sage-mid);border-radius:var(--r2);padding:24px 28px;margin:32px 0}
+.art-infobox-title{font-size:13px;font-weight:700;color:var(--sage);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.art-infobox-title svg{stroke:var(--sage);fill:none;stroke-width:2}
+.art-infobox p{font-size:14px;color:var(--ink2);margin-bottom:0;line-height:1.75}
+
+.art-table{width:100%;border-collapse:collapse;margin:24px 0 32px;font-size:14px}
+.art-table th{background:var(--ink);color:#fff;padding:12px 16px;text-align:left;font-weight:600;font-size:12px;letter-spacing:.02em}
+.art-table td{padding:12px 16px;border-bottom:1px solid var(--line);color:var(--ink2)}
+.art-table tr:last-child td{border-bottom:none}
+.art-table tr:nth-child(even) td{background:var(--bg2)}
+.art-tag-ok{background:var(--sage-lt);color:var(--sage);font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px}
+.art-tag-warn{background:var(--sand-lt);color:var(--sand);font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px}
+.art-tag-mid{background:var(--bg2);color:var(--ink3);font-size:11px;font-weight:700;padding:2px 9px;border-radius:20px;border:1px solid var(--line)}
+
+.art-divider{height:1px;background:var(--line);margin:44px 0}
+
+/* AUTOR + CTA */
+.art-footer{padding:0 5% 80px;max-width:760px;margin:0 auto}
+.art-author{display:flex;align-items:center;gap:16px;padding:24px;background:var(--bg2);border:1.5px solid var(--line);border-radius:var(--r2);margin-bottom:32px}
+.art-av{width:52px;height:52px;border-radius:50%;background:var(--sage);display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;color:#fff;flex-shrink:0}
+.art-author-name{font-size:14px;font-weight:700;color:var(--ink)}
+.art-author-role{font-size:12px;color:var(--ink3);margin-top:2px}
+.art-author-bio{font-size:13px;color:var(--ink3);margin-top:6px;line-height:1.6}
+.art-cta{background:var(--ink);border-radius:var(--r2);padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.art-cta-t{font-size:18px;font-weight:700;color:#fff;margin-bottom:6px;letter-spacing:-.02em}
+.art-cta-s{font-size:13px;color:rgba(255,255,255,.55);line-height:1.6}
+.art-cta-btn{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink);background:var(--sand2);border:none;cursor:pointer;padding:13px 24px;border-radius:10px;font-family:'Sora',sans-serif;transition:all .2s;white-space:nowrap;text-decoration:none}
+.art-cta-btn:hover{background:var(--sand);transform:translateY(-1px)}
+
+/* WEITERE BEITRÄGE */
+.art-more{padding:64px 5%;background:var(--bg2);border-top:1.5px solid var(--line)}
+.art-more-inner{max-width:960px;margin:0 auto}
+.art-more h3{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--ink);margin-bottom:28px}
+.art-more-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.art-more-card{background:var(--bg);border:1.5px solid var(--line);border-radius:var(--r2);padding:22px;text-decoration:none;transition:all .22s;display:block}
+.art-more-card:hover{border-color:var(--sage-mid);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
+.art-more-tag{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--sage);margin-bottom:8px}
+.art-more-t{font-size:14px;font-weight:700;color:var(--ink);line-height:1.35;letter-spacing:-.02em}
+.art-more-arr{margin-top:12px;font-size:12px;font-weight:700;color:var(--sage)}
+
+/* FOOTER */
+footer{background:var(--ink);padding:52px 5% 32px}
+.ft{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.07)}
+.fbn{font-family:'DM Serif Display',serif;font-size:22px;color:#fff;margin-bottom:10px;letter-spacing:-.03em}
+.fbn em{color:var(--sand2);font-style:normal}
+.fbt{font-size:13px;color:rgba(255,255,255,.38);line-height:1.7;font-weight:300}
+.fc4 h4{font-size:12px;font-weight:700;color:rgba(255,255,255,.35);letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px}
+.fc4 a{display:block;font-size:13px;color:rgba(255,255,255,.55);text-decoration:none;margin-bottom:8px;transition:color .18s}
+.fc4 a:hover{color:#fff}
+.fbot{max-width:1120px;margin:24px auto 0;display:flex;align-items:center;justify-content:space-between}
+.fbcopy{font-size:12px;color:rgba(255,255,255,.3)}
+.fblnks{display:flex;gap:18px}
+.fblnks a{font-size:12px;color:rgba(255,255,255,.3);text-decoration:none}
+.fblnks a:hover{color:rgba(255,255,255,.6)}
+
+@media(max-width:860px){
+  nav{padding:0 16px;height:60px}
+  .nlinks,.nright{display:none}
+  .nav-burger{display:flex}
+  .art-hero{padding:88px 20px 48px}
+  .art-body,.art-footer{padding-left:20px;padding-right:20px}
+  .art-cta{flex-direction:column;gap:16px;padding:24px}
+  .art-more{padding:48px 20px}
+  .art-more-grid{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr;gap:28px}
+}
+</style>
+</head>
+<body>
+<nav id="nav">
+  <a href="index.html" class="nlogo">
+    <div class="nmark"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+    <span class="nname">Altera <em>Immobilien</em></span>
+  </a>
+  <div class="nlinks">
+    <a href="leistungen.html">Leistungen</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="ratgeber.html" style="color:var(--sage)">Ratgeber</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <div class="nright">
+    <button class="nghost" onclick="window.location.href='bewertung.html'">Immobilie bewerten</button>
+    <button class="ncta" onclick="window.location.href='kontakt.html'">Beratung anfragen</button>
+  </div>
+  <button class="nav-burger" id="navBurger" onclick="toggleMenu()" aria-label="Menü">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="leistungen.html">Leistungen</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="ueber-uns.html">Über uns</a>
+  <a href="ratgeber.html">Ratgeber</a>
+  <a href="kontakt.html">Kontakt</a>
+  <div class="mm-btns">
+    <button class="mm-ghost" onclick="window.location.href='bewertung.html'">Immobilie bewerten</button>
+    <button class="mm-cta" onclick="window.location.href='kontakt.html'">Beratung anfragen</button>
+  </div>
+</div>
+
+<!-- ARTIKEL HERO -->
+<div class="art-hero">
+  <div class="art-hero-inner">
+    <a href="ratgeber.html" class="art-back">
+      <svg width="14" height="14" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zum Ratgeber
+    </a>
+    <div class="art-tag">Verkauf</div>
+    <h1 class="art-h1">Der richtige Zeitpunkt<br>für den Verkauf</h1>
+    <div class="art-meta">
+      <span><svg width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 7 Minuten Lesezeit</span>
+      <span><svg width="13" height="13" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> März 2025</span>
+      <span>Von Thierry Mataré</span>
+    </div>
+  </div>
+</div>
+
+<!-- ARTIKEL BODY -->
+<div class="art-body">
+
+  <p class="art-lead">Den richtigen Moment für einen Immobilienverkauf zu finden ist keine Glückssache. Es gibt messbare Faktoren, die den Unterschied zwischen einem sehr guten und einem durchschnittlichen Erlös ausmachen können.</p>
+
+  <h2>Warum der Zeitpunkt wichtig ist</h2>
+  <p>Viele Eigentümer glauben, der Wert einer Immobilie sei fix. Tatsächlich schwankt der erzielbare Preis je nach Marktlage, Zinsniveau und Saisonalität um <strong>10 bis 20 Prozent</strong>. Wer diesen Spielraum versteht, kann ihn nutzen.</p>
+  <p>Ein Beispiel: Dieselbe Eigentumswohnung am Zürichsee kann im Frühjahr 2024 für CHF 1.85 Millionen verkauft werden, im Herbst 2022 (als die Zinsen rasant stiegen) für CHF 1.62 Millionen. Die Immobilie hat sich nicht verändert. Der Markt schon.</p>
+
+  <h2>Die vier entscheidenden Faktoren</h2>
+
+  <h3>1. Zinsniveau und Hypothekarmarkt</h3>
+  <p>Der wichtigste Einflussfaktor ist der Hypothekarzins. Steigen die Zinsen, sinkt die Kaufkraft der Käufer, weil dieselbe monatliche Belastung weniger Kaufpreis trägt. <strong>Eine Zinssteigerung von 1% entspricht bei einem typischen Zürichsee-Objekt einem Werteinfluss von 8 bis 12%.</strong></p>
+  <p>Konkret: Wenn eine Käuferin eine monatliche Hypothekarbelastung von CHF 4'000 tragen kann, ermöglicht ihr ein Zins von 1.5% eine Finanzierung von rund CHF 2.1 Millionen. Bei 3% sind es noch CHF 1.6 Millionen. Das hat direkte Auswirkungen darauf, was sie bereit ist zu zahlen.</p>
+
+  <div class="art-infobox">
+    <div class="art-infobox-title"><svg width="15" height="15" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Altera-Einschätzung 2025</div>
+    <p>Die SARON-Hypothekarzinsen haben sich seit dem Höhepunkt 2023 deutlich entspannt. Für Verkäufer bedeutet das: Das Marktumfeld ist heute günstiger als noch vor 18 Monaten. Käufer können wieder mehr finanzieren, was sich positiv auf die erzielbaren Preise auswirkt.</p>
+  </div>
+
+  <h3>2. Angebot und Nachfrage in Ihrer Region</h3>
+  <p>Immobilienmärkte sind lokal. Was in Zürich gilt, muss in St. Gallen nicht zutreffen. Am Zürichsee etwa ist das Angebot strukturell knapp: Die Gemeinden sind dicht besiedelt, Neubau ist eingeschränkt, und die Nachfrage von gut verdienenden Fachkräften ist konstant hoch.</p>
+  <p>Relevant für Ihre Entscheidung: Wie viele vergleichbare Objekte sind gerade auf dem Markt? Je weniger Konkurrenz, desto stärker Ihre Verhandlungsposition. Wir beobachten den regionalen Markt laufend und können Ihnen genau sagen, wie das Verhältnis aktuell aussieht.</p>
+
+  <h3>3. Saisonalität</h3>
+  <p>Immobilien werden nicht gleichmässig über das Jahr verkauft. Es gibt bewährte Rhythmen:</p>
+
+  <table class="art-table">
+    <tr><th>Quartal</th><th>Marktaktivität</th><th>Empfehlung</th></tr>
+    <tr><td>Jan / Feb</td><td>Ruhig</td><td><span class="art-tag-mid">Vorbereiten</span></td></tr>
+    <tr><td>März / Apr / Mai</td><td>Sehr aktiv</td><td><span class="art-tag-ok">Ideal für Verkauf</span></td></tr>
+    <tr><td>Juni / Juli</td><td>Aktiv, leicht abflachend</td><td><span class="art-tag-ok">Gut</span></td></tr>
+    <tr><td>Aug / Sep</td><td>Ferienbedingt ruhiger</td><td><span class="art-tag-mid">Abwarten</span></td></tr>
+    <tr><td>Okt / Nov</td><td>Zweiter Höhepunkt</td><td><span class="art-tag-ok">Gut</span></td></tr>
+    <tr><td>Dezember</td><td>Sehr ruhig</td><td><span class="art-tag-warn">Nicht empfohlen</span></td></tr>
+  </table>
+
+  <p>Frühling ist die stärkste Saison: Objekte sind noch nicht auf Sommer-Modus, Käufer sind aktiv, und gute Fotos zeigen Garten und Aussicht optimal.</p>
+
+  <h3>4. Persönliche Situation und Steueroptimierung</h3>
+  <p>Neben dem Markt gibt es persönliche Faktoren: Haben Sie bereits eine Anschlusslösung? Droht eine Erbschaft oder Scheidung, die das Timing bestimmt? Und ein oft übersehener Punkt: <strong>Die Grundstückgewinnsteuer nimmt mit der Haltedauer ab.</strong> In vielen Kantonen gilt: Wer länger als 10 Jahre hält, zahlt deutlich weniger Steuer. Das kann den Zeitpunkt beeinflussen.</p>
+
+  <h2>Wann sollten Sie jetzt handeln?</h2>
+  <p>Wenn Sie ernsthaft überlegen zu verkaufen, ist der erste Schritt immer eine aktuelle Wertschätzung. Nicht um sich festzulegen, sondern um eine Entscheidungsgrundlage zu haben. Wie viel ist Ihre Immobilie heute wert? Wie sieht die Prognose für die nächsten 12 Monate aus?</p>
+  <p>Diese Fragen beantworten wir Ihnen, ohne dass Sie sich zu irgendetwas verpflichten müssen. Unser Online-Bewerter liefert in 3 Minuten eine erste Einschätzung, unser Schätzer-Team kann danach für eine präzise Vor-Ort-Analyse einen Termin vereinbaren.</p>
+
+  <div class="art-infobox">
+    <div class="art-infobox-title"><svg width="15" height="15" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Das Wichtigste zusammengefasst</div>
+    <p>Frühling ist die beste Verkaufssaison. Tiefe Zinsen begünstigen höhere Kaufpreise. Wenig Angebot in Ihrer Region stärkt Ihre Position. Und: Wer bei sinkenden Zinsen und knappem Angebot wartet, wartet oft auf den zweitbesten Zeitpunkt. Der beste ist meistens jetzt.</p>
+  </div>
+
+</div>
+
+<!-- AUTOR + CTA -->
+<div class="art-footer">
+  <div class="art-author">
+    <div class="art-av">TM</div>
+    <div>
+      <div class="art-author-name">Thierry Mataré</div>
+      <div class="art-author-role">Mitgründer & Broker, Altera Immobilien</div>
+      <div class="art-author-bio">In Küsnacht aufgewachsen, über 10 Jahre Erfahrung in der Immobilienvermittlung am Zürichsee. Thierry begleitet Verkäufer von der ersten Einschätzung bis zur Schlüsselübergabe.</div>
+    </div>
+  </div>
+  <div class="art-cta">
+    <div>
+      <div class="art-cta-t">Wie viel ist Ihre Immobilie heute wert?</div>
+      <div class="art-cta-s">Sofortergebnis mit hedonischer Methodik. Anonym, in 3 Minuten.</div>
+    </div>
+    <a href="bewertung.html" class="art-cta-btn">
+      Jetzt bewerten
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+    </a>
+  </div>
+</div>
+
+<!-- WEITERE BEITRÄGE -->
+<div class="art-more">
+  <div class="art-more-inner">
+    <h3>Weitere Beiträge</h3>
+    <div class="art-more-grid">
+      <a href="blog-hedonische-methode.html" class="art-more-card">
+        <div class="art-more-tag">Bewertung</div>
+        <div class="art-more-t">Hedonische Methode einfach erklärt</div>
+        <div class="art-more-arr">Weiterlesen →</div>
+      </a>
+      <a href="blog-5-massnahmen.html" class="art-more-card">
+        <div class="art-more-tag">Wertsteigerung</div>
+        <div class="art-more-t">5 Massnahmen vor dem Verkauf</div>
+        <div class="art-more-arr">Weiterlesen →</div>
+      </a>
+      <a href="blog-grundstueckgewinnsteuer.html" class="art-more-card">
+        <div class="art-more-tag">Steuern</div>
+        <div class="art-more-t">Grundstückgewinnsteuer verstehen</div>
+        <div class="art-more-arr">Weiterlesen →</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft">
+    <div>
+      <div class="fbn">Altera <em>Immobilien</em></div>
+      <div class="fbt">Ein Familienbetrieb aus Küsnacht am Zürichsee, mit Leidenschaft für Immobilien und Menschen.</div>
+    </div>
+    <div class="fc4"><h4>Leistungen</h4><a href="leistungen.html">Immobilienvermittlung</a><a href="bewertung.html">Immobilie bewerten</a><a href="leistungen.html">Vermarktung</a></div>
+    <div class="fc4"><h4>Unternehmen</h4><a href="ueber-uns.html">Über uns</a><a href="portfolio.html">Portfolio</a><a href="ratgeber.html">Ratgeber</a><a href="kontakt.html">Kontakt</a></div>
+    <div class="fc4"><h4>Kontakt</h4><a href="tel:+41440000000">+41 44 000 00 00</a><a href="#">Seestrasse 88, 8700 Küsnacht</a></div>
+  </div>
+  <div class="fbot">
+    <div class="fbcopy">© 2025 Altera Immobilien GmbH · Küsnacht am Zürichsee</div>
+    <div class="fblnks"><a href="#">Datenschutz</a><a href="#">Impressum</a></div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>20));
+function toggleMenu(){
+  const m=document.getElementById('mobileMenu'),b=document.getElementById('navBurger');
+  const o=m.classList.contains('open');
+  m.classList.toggle('open',!o);b.classList.toggle('open',!o);
+  document.body.style.overflow=o?'':'hidden';
+}
+</script>
+</body>
+</html>

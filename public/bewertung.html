@@ -632,6 +632,48 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
   .rcontact-cta-inner{padding:22px 18px}
 }
 
+/* ═══ BEWERTUNGS-HERO ═══ */
+.beval-hero{background:linear-gradient(135deg,var(--ink) 0%,#1a2a20 60%,#0d1a10 100%);padding:116px 5% 72px;position:relative;overflow:hidden}
+.beval-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 80% at 70% 50%,rgba(52,78,65,.35) 0%,transparent 65%);pointer-events:none}
+.beval-hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.beval-eyebrow{font-size:11px;font-weight:600;color:rgba(255,255,255,.5);letter-spacing:.08em;text-transform:uppercase;display:flex;align-items:center;gap:8px;margin-bottom:22px}
+.beval-dot{width:6px;height:6px;border-radius:50%;background:#4ADE80;flex-shrink:0;animation:pulse 2s infinite}
+.beval-h1{font-family:'DM Serif Display',serif;font-size:clamp(40px,5vw,66px);font-weight:400;color:#fff;line-height:1.02;letter-spacing:-.03em;margin-bottom:20px}
+.beval-h1 em{color:var(--sand2);font-style:normal}
+.beval-sub{font-size:16px;color:rgba(255,255,255,.6);line-height:1.78;font-weight:300;max-width:420px;margin-bottom:28px}
+.beval-pills{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:32px}
+.beval-pill{font-size:11px;font-weight:500;color:rgba(255,255,255,.65);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:5px 12px;border-radius:20px}
+.beval-cta{display:inline-flex;align-items:center;gap:9px;font-size:15px;font-weight:700;color:var(--ink);background:var(--sand2);border:none;cursor:pointer;padding:14px 28px;border-radius:11px;font-family:'Sora',sans-serif;transition:all .22s;letter-spacing:-.02em}
+.beval-cta:hover{background:var(--sand);transform:translateY(-2px);box-shadow:0 8px 28px rgba(181,144,90,.35)}
+.beval-cta svg{transition:transform .22s}
+.beval-cta:hover svg{transform:translateX(3px)}
+
+.beval-hero-cards{display:flex;flex-direction:column;gap:14px}
+.beval-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:22px 24px;backdrop-filter:blur(10px)}
+.beval-card-main{background:rgba(255,255,255,.09)}
+.beval-card-label{font-size:11px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.07em;margin-bottom:6px}
+.beval-card-value{font-family:'DM Serif Display',serif;font-size:34px;color:#fff;letter-spacing:-.04em;line-height:1;margin-bottom:6px}
+.beval-card-range{font-size:12px;color:rgba(255,255,255,.45);margin-bottom:14px}
+.beval-bar{position:relative;height:6px;background:rgba(255,255,255,.1);border-radius:3px;overflow:visible}
+.beval-bar-fill{position:absolute;inset:0;background:linear-gradient(90deg,var(--sage3),var(--sand2));border-radius:3px}
+.beval-bar-pin{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:10px;font-weight:600;color:#fff;white-space:nowrap}
+.beval-card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.beval-card-sm{padding:16px 18px;text-align:center}
+.beval-sm-n{font-size:18px;font-weight:700;color:#fff;letter-spacing:-.03em;margin-bottom:3px}
+.beval-sm-l{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em}
+
+@media(max-width:860px){
+  .beval-hero{padding:88px 20px 52px}
+  .beval-hero-inner{grid-template-columns:1fr;gap:36px}
+  .beval-h1{font-size:clamp(36px,9vw,52px)}
+  .beval-card-value{font-size:26px}
+  .beval-card-row{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:480px){
+  .beval-card-row{grid-template-columns:1fr 1fr}
+  .beval-card-row .beval-card-sm:last-child{grid-column:span 2}
+}
+
 .page-hero{background:var(--bg2);padding:110px 5% 52px;border-bottom:1px solid var(--line)}
 .page-hero-inner{max-width:800px}
 .page-eyebrow{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--sand);margin-bottom:12px}
@@ -731,7 +773,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 </head>
 <body>
 <nav id="nav">
-  <a href="#" class="nlogo">
+  <a href="index.html" class="nlogo">
     <div class="nmark"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
     <span class="nname">Altera <em>Immobilien</em></span>
   </a>
@@ -777,6 +819,55 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
   </div>
 </div>
 
+
+<!-- ═══ HERO ═══ -->
+<section class="beval-hero">
+  <div class="beval-hero-inner">
+    <div class="beval-hero-text">
+      <div class="beval-eyebrow">
+        <span class="beval-dot"></span>
+        Hedonische Methodik · Sofortergebnis · PDF-Report
+      </div>
+      <h1 class="beval-h1">Ihr Immobilienwert.<br><em>In 3 Minuten.</em></h1>
+      <p class="beval-sub">Erfahren Sie, was Ihre Immobilie heute wert ist. Dieselbe Methodik wie Schweizer Kantonalbanken, anonym und ohne Verpflichtung.</p>
+      <div class="beval-pills">
+        <span class="beval-pill">Lage bis 50% des Werts</span>
+        <span class="beval-pill">15+ Bewertungsfaktoren</span>
+        <span class="beval-pill">Anonym</span>
+        <span class="beval-pill">PDF-Report inklusive</span>
+      </div>
+      <button class="beval-cta" onclick="document.getElementById('bewertung').scrollIntoView({behavior:'smooth'})">
+        Jetzt Immobilie bewerten
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+    <div class="beval-hero-cards">
+      <div class="beval-card beval-card-main">
+        <div class="beval-card-label">Geschätzter Marktwert</div>
+        <div class="beval-card-value">CHF 1'840'000</div>
+        <div class="beval-card-range">Bandbreite CHF 1'710'000 – CHF 1'970'000</div>
+        <div class="beval-card-bar">
+          <div class="beval-bar-fill"></div>
+          <div class="beval-bar-pin"><span>Schätzwert</span></div>
+        </div>
+      </div>
+      <div class="beval-card-row">
+        <div class="beval-card beval-card-sm">
+          <div class="beval-sm-n">92</div>
+          <div class="beval-sm-l">Objekt-Score</div>
+        </div>
+        <div class="beval-card beval-card-sm">
+          <div class="beval-sm-n">CHF 11'400</div>
+          <div class="beval-sm-l">Pro m² Region</div>
+        </div>
+        <div class="beval-card beval-card-sm">
+          <div class="beval-sm-n">Hoch</div>
+          <div class="beval-sm-l">Markt-Nachfrage</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ WIE ES FUNKTIONIERT ═══ -->
 <section class="sec alt">
@@ -895,14 +986,14 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 <section class="sec alt">
   <div class="info-inner">
     <div class="ey">Ehrliche Einschätzung</div>
-    <h2 class="st">Was der Bewerter kann — und was nicht.</h2>
+    <h2 class="st">Was der Bewerter kann und was nicht.</h2>
     <p class="sb">Wir glauben an Transparenz. Deshalb sagen wir Ihnen klar, wann unser Online-Tool ausreicht und wann Sie eine persönliche Schätzung brauchen.</p>
     <div class="vg-grid">
       <div class="vg-col pro">
         <div class="vg-head">
           <div class="vg-ico green"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div>
-            <div class="vg-ht">Das kann der Online-Bewerter</div>
+            <div class="vg-ht">Das kann unser Online-Bewerter</div>
             <div class="vg-hs">Sofort, kostenlos, ohne Anmeldung</div>
           </div>
         </div>
