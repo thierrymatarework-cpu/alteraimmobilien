@@ -663,15 +663,19 @@ input[type=range]::-webkit-slider-thumb{appearance:none;width:18px;height:18px;b
 .beval-sm-l{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.05em}
 
 @media(max-width:860px){
-  .beval-hero{padding:88px 20px 52px}
-  .beval-hero-inner{grid-template-columns:1fr;gap:36px}
-  .beval-h1{font-size:clamp(36px,9vw,52px)}
-  .beval-card-value{font-size:26px}
-  .beval-card-row{grid-template-columns:repeat(3,1fr)}
+  .beval-hero{padding:96px 22px 56px}
+  .beval-hero-inner{grid-template-columns:1fr;gap:0}
+  .beval-hero-cards{display:none}
+  .beval-eyebrow{font-size:10px;margin-bottom:16px}
+  .beval-h1{font-size:clamp(34px,9vw,48px);margin-bottom:14px}
+  .beval-sub{font-size:15px;margin-bottom:22px;max-width:100%}
+  .beval-pills{gap:6px;margin-bottom:26px}
+  .beval-pill{font-size:10.5px;padding:4px 10px}
+  .beval-cta{width:100%;justify-content:center;padding:15px 24px;font-size:15px}
 }
 @media(max-width:480px){
-  .beval-card-row{grid-template-columns:1fr 1fr}
-  .beval-card-row .beval-card-sm:last-child{grid-column:span 2}
+  .beval-hero{padding:88px 18px 48px}
+  .beval-h1{font-size:clamp(30px,10vw,42px)}
 }
 
 .page-hero{background:var(--bg2);padding:110px 5% 52px;border-bottom:1px solid var(--line)}
